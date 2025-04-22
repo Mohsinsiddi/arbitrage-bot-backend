@@ -1,0 +1,38 @@
+# Arbitrage Bot Configuration
+
+# Ethereum Node Endpoints
+rpcEndpoints:
+  - "http://localhost:8545"
+  - "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
+
+# WebSocket endpoints for real-time events
+wsEndpoints:
+  - "ws://localhost:8546"
+  - "wss://eth-sepolia.g.alchemy.com/v2/your-api-key"
+
+# Private keys (REMOVE IN PRODUCTION - use .env or secret management)
+privateKeys:
+  - "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+
+# Contract addresses
+contractAddress: "0x029302B8aD89864284db941B5d86587563a8A879"
+
+# Token addresses
+tokenAddresses:
+  USDC: "0x94a9D9AC8a22534E3FaCa9F4e7F2E2cf85d5E4C8"
+  TEST: "0x88cE5649877d5C5aa16F96ee7b8c79Fd4338432e"
+
+# DEX routers
+dexRouters:
+  DEX1: "0xeE567Fe1712Faf6149d80dA1E6934E354124CfE3"
+  DEX2: "0xeaBcE3E74EF41FB40024a21Cc2ee2F5dDc615791"
+
+# Minimum profit threshold (in USDC)
+minProfit: "0.5"
+
+# Gas settings
+gasSettings:
+  maxGasPrice: "100000000000"  # 100 Gwei
+  priorityFee: "1000000000"    # 1 Gwei
+  gasLimitMultiplier: 1.2      # Add 20% to estimated gas
+  speedUpThreshold: 3          # Speed up after 3 blocks
